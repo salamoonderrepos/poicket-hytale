@@ -1,0 +1,18 @@
+{
+  "Conditions": {
+    "EnvironmentTagPattern": {
+      "Op": "Equals",
+      "Tag": "Inbetween"
+    }
+  },
+  "AudioCategory": "AudioCat_Music",
+  "Priority": 20,
+  "Music": {
+    "Tracks": [
+      "Music/Rememberance.ogg",
+      "Music/Zone4/Z4S-GhostsandSpiders.ogg",
+      "Music/zUnused/DemonicTension.ogg",
+      "Music/zUnused/DeadEchoes1.ogg"
+    ]
+  }
+}

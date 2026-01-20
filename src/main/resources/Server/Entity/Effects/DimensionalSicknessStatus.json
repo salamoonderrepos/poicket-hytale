@@ -1,0 +1,37 @@
+{
+  "ApplicationEffects": {
+    "EntityBottomTint": "#000000",
+    "EntityTopTint": "#400080",
+    "EntityAnimationId": "Hurt",
+    "WorldSoundEventId": "SFX_Effect_Poison_World",
+    "LocalSoundEventId": "SFX_Effect_Poison_Local",
+    "Particles": [
+      {
+        "SystemId": "Ash_Storm",
+        "Color": "#b878ff"
+      }
+    ]
+  },
+  "DamageCalculatorCooldown": 5,
+  "DamageCalculator": {
+    "BaseDamage": {
+      "InbetweenEventualDeath": 10
+    }
+  },
+  "DamageEffects": {
+    "WorldSoundEventId": "SFX_Effect_Poison_World",
+    "PlayerSoundEventId": "SFX_Effect_Poison_Local",
+    "CameraEffect": "Impact",
+    "StaminaDrainMultiplier": 2
+  },
+  "OverlapBehavior": "Overwrite",
+  "RemovalBehavior": "Infinite",
+  "Infinite": false,
+  "Debuff": true,
+  "StatusEffectIcon": "UI/StatusEffects/Dim_Sickness.png",
+  "Duration": 0,
+  "LocalRemovalSoundEventId": "SFX_Attn_Loud",
+  "Name": "Dimensional Sickness",
+  "ValueType": "Absolute",
+  "Invulnerable": false
+}

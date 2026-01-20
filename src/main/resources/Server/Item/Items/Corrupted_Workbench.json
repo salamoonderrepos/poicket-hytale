@@ -1,0 +1,146 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.poicket.Corrupted_Workbench.name",
+    "Description": "server.items.poicket.Corrupted_Workbench.description"
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "Quantity": 1,
+        "ResourceTypeId": "",
+        "ItemId": "Bench_WorkBench"
+      },
+      {
+        "ItemId": "Ingredient_Salt",
+        "Quantity": 1
+      },
+      {
+        "ItemId": "Ingredient_Voidheart"
+      }
+    ],
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Categories": [
+          "Workbench_Crafting"
+        ],
+        "Id": "Workbench"
+      }
+    ],
+    "TimeSeconds": 5
+  },
+  "Icon": "Icons/ItemsGenerated/Corrupted_Workbench.png",
+  "Categories": [
+    "Furniture.Benches"
+  ],
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Model",
+    "Opacity": "Transparent",
+    "CustomModel": "Blocks/CorruptedWorkbench/CorruptedWorkbench.blockymodel",
+    "CustomModelTexture": [
+      {
+        "Texture": "BlockTextures/CorruptedWorkbenchTexture.png",
+        "Weight": 1
+      },
+      {},
+      {},
+      {},
+      {}
+    ],
+    "HitboxType": "Bench_Workbench",
+    "VariantRotation": "NESW",
+    "Bench": {
+      "Type": "Crafting",
+      "Categories": [
+        {
+          "Id": "Corrupted_Workbench_Ingredients",
+          "Icon": "Icons/CraftingCategories/Workbench/WeaponsCrude.png",
+          "Name": "server.items.poicket.Corrupted_Workbench.categories.ingredients"
+        },
+        {
+          "Id": "Corrupted_Workbench_Work_Spaces",
+          "Icon": "Icons/CraftingCategories/Workbench/Tools.png",
+          "Name": "server.items.poicket.Corrupted_Workbench.categories.work_spaces"
+        },
+        {
+          "Id": "Corrupted_Workbench_Misc",
+          "Icon": "Icons/CraftingCategories/Workbench/Processing.png",
+          "Name": "server.items.poicket.Corrupted_Workbench.categories.misc"
+        }
+      ],
+      "LocalOpenSoundEventId": "SFX_Workbench_Open",
+      "LocalCloseSoundEventId": "SFX_Workbench_Close",
+      "CompletedSoundEventId": "SFX_Workbench_Craft",
+      "FailedSoundEventId": "SFX_Generic_Crafting_Failed",
+      "BenchUpgradeSoundEventId": "SFX_Workbench_Upgrade_Start_Default",
+      "BenchUpgradeCompletedSoundEventId": "SFX_Workbench_Upgrade_Complete_Default",
+      "Id": "CorruptedWorkbench"
+    },
+    "State": {
+      "Id": "crafting",
+      "Definitions": {
+        "CraftCompleted": {
+          "CustomModelAnimation": "Blocks/CorruptedWorkbench/HeartBeat.blockyanim",
+          "Looping": true
+        },
+        "CraftCompletedInstant": {
+          "CustomModelAnimation": "Blocks/CorruptedWorkbench/HeartBeat.blockyanim"
+        }
+      }
+    },
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "Benches",
+        "ItemId": "Corrupted_Workbench"
+      }
+    },
+    "BlockParticleSetId": "Wood",
+    "ParticleColor": "#6e4a2f",
+    "Support": {
+      "Down": [
+        {
+          "FaceType": "Full"
+        }
+      ]
+    },
+    "BlockSoundSetId": "Wood",
+    "CustomModelAnimation": "Blocks/CorruptedWorkbench/HeartBeat22.blockyanim",
+    "BlockBreakingDecalId": "Breaking_Decals_Wood",
+    "RequiresAlphaBlending": false,
+    "Particles": [
+      {
+        "SystemId": "Willow_Fruit",
+        "TargetEntityPart": "Self",
+        "PositionOffset": {
+          "Y": 1.6
+        },
+        "Color": "#e4bdfd",
+        "Scale": 1,
+        "DetachedFromModel": false
+      }
+    ]
+  },
+  "PlayerAnimationsId": "Block",
+  "IconProperties": {
+    "Scale": 0.42,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      12.9,
+      -11.7
+    ]
+  },
+  "Tags": {
+    "Type": [
+      "Bench"
+    ]
+  },
+  "MaxStack": 1,
+  "ItemSoundSetId": "ISS_Blocks_Wood",
+  "Animation": "Blocks/CorruptedWorkbench/HeartBeat.blockyanim",
+  "Looping": true
+}

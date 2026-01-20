@@ -1,1 +1,11 @@
 items.Example_Block.name=Example Block
+items.poicket.Binding_Cotton.name=Binding Cotton
+items.poicket.Corrupted_Workbench.name=Corrupted Workbench
+items.poicket.Corrupted_Workbench.description=Used to create void related items.
+items.poicket.Corrupted_Workbench.categories.ingredients=Ingredients
+items.poicket.Corrupted_Workbench.categories.work_spaces=Work Spaces
+items.poicket.Corrupted_Workbench.categories.misc=Miscellaneous
+general.damageCauses.dimensionalsicknessstatus=an ancient disease
+entityEffects.inbetweensicknessstatus=Dimensional Sickness
+zone.region.InbetweenDesertBiome=Empty Hills
+zone.InbetweenWorldStructureAsset=The Innards

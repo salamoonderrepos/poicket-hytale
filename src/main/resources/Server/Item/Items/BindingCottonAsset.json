@@ -1,0 +1,54 @@
+{
+  "TranslationProperties": {
+    "Name": "server.items.poicket.Binding_Cotton.name",
+    "Description": "server.items.poicket.Binding_Cotton.description"
+  },
+  "Icon": "Icons/ItemsGenerated/BindingCottonAsset.png",
+  "Categories": [
+    "Blocks.Rocks"
+  ],
+  "ItemLevel": 80,
+  "BlockType": {
+    "Material": "Solid",
+    "DrawType": "Cube",
+    "Group": "Cloth",
+    "Flags": {},
+    "Gathering": {
+      "Breaking": {
+        "GatherType": "SoftBlocks"
+      }
+    },
+    "BlockParticleSetId": "Dust",
+    "Textures": [
+      {
+        "Weight": 1,
+        "All": "BlockTextures/BindingCottong.png"
+      }
+    ],
+    "BlockSoundSetId": "Cloth",
+    "ParticleColor": "#1e1c1c",
+    "CubeShadingMode": "Standard",
+    "RandomRotation": "None",
+    "FlipType": "Symmetric",
+    "RotationYawPlacementOffset": "None"
+  },
+  "PlayerAnimationsId": "Block",
+  "Tags": {
+    "Type": [
+      "Cloth"
+    ]
+  },
+  "ItemSoundSetId": "ISS_Items_Cloth",
+  "IconProperties": {
+    "Scale": 0.58823,
+    "Rotation": [
+      22.5,
+      45,
+      22.5
+    ],
+    "Translation": [
+      0,
+      -13.5
+    ]
+  }
+}

@@ -52,5 +52,26 @@
       0,
       -13.5
     ]
+  },
+  "Recipe": {
+    "Input": [
+      {
+        "ItemId": "Ingredient_Salt"
+      }
+    ],
+    "PrimaryOutput": {
+      "ItemId": "Example_Block",
+      "Quantity": 3
+    },
+    "BenchRequirement": [
+      {
+        "Type": "Crafting",
+        "Id": "CorruptedWorkbench",
+        "Categories": [
+          "Corrupted_Workbench_Misc"
+        ]
+      }
+    ],
+    "TimeSeconds": 10
   }
 }
