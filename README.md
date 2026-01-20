@@ -1,4 +1,3 @@
-# Hytale Plugin Template
+# Poicket
 
-A template for Hytale java plugins. Created by Up, and slightly modified by Kaupenjoe. 
-
+Hytale mod for pocket dimensions. Built from template by Kaupenjoe.
