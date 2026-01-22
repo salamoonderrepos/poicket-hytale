@@ -2,6 +2,7 @@ package dev.noelle.poicketplugin;
 
 import com.hypixel.hytale.component.ComponentType;
 import com.hypixel.hytale.logger.HytaleLogger;
+import com.hypixel.hytale.server.core.event.events.BootEvent;
 import com.hypixel.hytale.server.core.event.events.player.AddPlayerToWorldEvent;
 import com.hypixel.hytale.server.core.event.events.player.PlayerMouseButtonEvent;
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
@@ -9,6 +10,7 @@ import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 import com.hypixel.hytale.server.core.universe.Universe;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
+import com.hypixel.hytale.server.core.universe.world.worldgen.provider.IWorldGenProvider;
 import dev.noelle.poicketplugin.components.markers.ApplySicknessTimerMarker;
 import dev.noelle.poicketplugin.components.markers.RemoveSicknessTimerMarker;
 import dev.noelle.poicketplugin.components.timers.SicknessTimerComponent;
@@ -18,6 +20,7 @@ import dev.noelle.poicketplugin.managers.PlayableInbetweenManager;
 import dev.noelle.poicketplugin.systems.SicknessSystem;
 import dev.noelle.poicketplugin.managers.InbetweenPlayerPopulationManager;
 import dev.noelle.poicketplugin.systems.TimerSystem;
+import dev.noelle.poicketplugin.worldgen.PlayableInbetweenWorldProvider;
 
 public class PoicketMainPlugin extends JavaPlugin {
     private static final HytaleLogger LOGGER = HytaleLogger.forEnclosingClass();
@@ -30,13 +33,15 @@ public class PoicketMainPlugin extends JavaPlugin {
         super(init);
         LOGGER.atInfo().log("Hello from %s version %s", this.getName(), this.getManifest().getVersion().toString());
     }
-    @Override
-    protected void start(){
-        PlayableInbetweenManager.initialize();
-    }
+
     @Override
     protected void setup() {
+        IWorldGenProvider.CODEC.register("InbetweenWorldGen", PlayableInbetweenWorldProvider.class, PlayableInbetweenWorldProvider.CODEC);
+
         getEventRegistry().registerGlobal(AddPlayerToWorldEvent.class, InbetweenPlayerPopulationManager::playerEntersWorld);
+        getEventRegistry().registerGlobal(BootEvent.class, (event) -> {
+            PlayableInbetweenManager.initialize();
+        });
 
         getEntityStoreRegistry().registerSystem(new NoDeathInTheInbetween());
         sicknessTimerComponentType = this.getEntityStoreRegistry().registerComponent(SicknessTimerComponent.class, SicknessTimerComponent::new);
@@ -48,6 +53,8 @@ public class PoicketMainPlugin extends JavaPlugin {
 
 
         this.getCommandRegistry().registerCommand(new ExampleCommand(this.getName(), this.getManifest().getVersion().toString(), applySicknessTimerMarkerComponentType));
+        this.getCommandRegistry().registerCommand(new ResetInbetween(this.getName(), this.getManifest().getVersion().toString(), applySicknessTimerMarkerComponentType));
+
         getEntityStoreRegistry().registerSystem(new BedExplosion());
         getEntityStoreRegistry().registerSystem(
                 new TimerSystem<>(
@@ -66,6 +73,18 @@ public class PoicketMainPlugin extends JavaPlugin {
 
 
 
+
+
+
+    }
+    @Override
+    protected void start(){
+        //PlayableInbetweenManager.initialize();
+
+//        World b = Universe.get().addWorld("Inbetween").thenApply((c) -> {
+//            c.getWorldConfig().setWorldGenProvider(new PlayableInbetweenWorldProvider());
+//            return c;
+//                }).join();
 
 
 

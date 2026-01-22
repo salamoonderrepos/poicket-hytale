@@ -7,5 +7,7 @@ items.poicket.Corrupted_Workbench.categories.work_spaces=Work Spaces
 items.poicket.Corrupted_Workbench.categories.misc=Miscellaneous
 general.damageCauses.dimensionalsicknessstatus=an ancient disease
 entityEffects.inbetweensicknessstatus=Dimensional Sickness
+client.hud.entityEffects.inbetweensicknessstatus=Dimensional Sickness
 zone.region.InbetweenDesertBiome=Empty Hills
 zone.InbetweenWorldStructureAsset=The Innards
+poicket.commands.resetInbetween=Reset Inbetween!

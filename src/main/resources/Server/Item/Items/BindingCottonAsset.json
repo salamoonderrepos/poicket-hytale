@@ -22,7 +22,12 @@
     "Textures": [
       {
         "Weight": 1,
-        "All": "BlockTextures/BindingCottong.png"
+        "Down": "BlockTextures/BindingCottong.png",
+        "Up": "BlockTextures/BindingCottong.png",
+        "West": "BlockTextures/BindingCottonSide.png",
+        "East": "BlockTextures/BindingCottonSide.png",
+        "South": "BlockTextures/BindingCottong.png",
+        "North": "BlockTextures/BindingCottong.png"
       }
     ],
     "BlockSoundSetId": "Cloth",

@@ -2,7 +2,7 @@
   "SkyTopColors": [
     {
       "Hour": 0,
-      "Color": "#140e1aff"
+      "Color": "#240f2aff"
     }
   ],
   "SkyBottomColors": [
@@ -26,13 +26,13 @@
   "FogDensities": [
     {
       "Hour": 0,
-      "Value": 0.85
+      "Value": 0.7
     }
   ],
   "FogHeightFalloffs": [
     {
       "Hour": 0,
-      "Value": 1.6
+      "Value": 0
     }
   ],
   "FogDistance": [
@@ -59,7 +59,7 @@
   "Particle": {
     "SystemId": "Ash",
     "OvergroundOnly": true,
-    "Color": "#580098"
+    "Color": "#3d3356"
   },
   "SunlightDampingMultipliers": [
     {

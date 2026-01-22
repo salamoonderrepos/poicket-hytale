@@ -1,6 +1,22 @@
 {
   "Type": "NoiseRange",
-  "Biomes": [],
+  "Biomes": [
+    {
+      "Biome": "InbetweenDesertBiome",
+      "Min": -0.5,
+      "Max": 1
+    },
+    {
+      "Biome": "InbetweenFlatBiome",
+      "Min": -0.95,
+      "Max": -0.5
+    },
+    {
+      "Biome": "InbetweenStrandBiome",
+      "Max": -0.95,
+      "Min": -1
+    }
+  ],
   "DefaultBiome": "InbetweenDesertBiome",
   "DefaultTransitionDistance": 32,
   "MaxBiomeEdgeDistance": 32,

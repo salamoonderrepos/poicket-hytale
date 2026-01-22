@@ -8,8 +8,10 @@ import com.hypixel.hytale.component.query.Query;
 import com.hypixel.hytale.component.system.EntityEventSystem;
 import com.hypixel.hytale.server.core.Message;
 import com.hypixel.hytale.server.core.entity.InteractionManager;
+import com.hypixel.hytale.server.core.entity.UUIDComponent;
 import com.hypixel.hytale.server.core.entity.entities.Player;
 import com.hypixel.hytale.server.core.event.events.ecs.PlaceBlockEvent;
+import com.hypixel.hytale.server.core.event.events.player.PlayerReadyEvent;
 import com.hypixel.hytale.server.core.modules.interaction.InteractionModule;
 import com.hypixel.hytale.server.core.universe.world.World;
 import com.hypixel.hytale.server.core.universe.world.storage.EntityStore;
@@ -35,8 +37,10 @@ public class BedExplosion extends EntityEventSystem<EntityStore, PlaceBlockEvent
         getLogger().info(playerworld.toString());
         getLogger().info(playerworld.getWorldConfig().toString());
         getLogger().info(playerworld.getWorldConfig().getWorldGenProvider().toString());
+        PlayerReadyEvent a;
 
-        if (playerworld.getName().contains("Inbetween")){
+
+        if (playerworld.getWorldConfig().getUuid()==PlayableInbetweenManager.getWorld().getWorldConfig().getUuid()){
             //getLogger().info("Yes you are in the inbetween!");
             //getLogger().info("Checkn if u got the right item in hand");
             if (event.getItemInHand().getItemId().equals("Furniture_Crude_Bed")){

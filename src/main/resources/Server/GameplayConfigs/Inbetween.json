@@ -1,0 +1,7 @@
+{
+  "Death": {
+    "ItemsLossMode": "Configured",
+    "ItemsDurabilityLossPercentage": 0,
+    "ItemsAmountLossPercentage": 0
+  }
+}
